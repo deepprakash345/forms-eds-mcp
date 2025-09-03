@@ -12,7 +12,6 @@ services:
       - MCP_PORT=8080
       - MCP_HOST=0.0.0.0
       - MCP_DEBUG=true
-      - WEATHER_API_KEY=${WEATHER_API_KEY:-}
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]

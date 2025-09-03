@@ -39,8 +39,17 @@ The Python MCP server is the core implementation providing all FORMS Edge Delive
    MCP_TRANSPORT=stdio  MCP_DEBUG=false forms-edge-delivery-mcp
    ```
 **You can also change the values of these environment variables in .env file**   
-  
-### 🏗️ Architecture
+
+
+## For Development (Using docker)
+The docker-compose.yml file already has environment variables configured to run the mcp server over http on port 8080
+```bash
+cd mcp
+docker-compose down && docker-compose up --build -d
+```
+
+
+## 🏗️ Architecture
 
 ```
 ┌─────────────────┐    MCP Protocol    ┌─────────────────┐    HTTP/STDIO    ┌─────────────────┐
