@@ -1,0 +1,33 @@
+{
+  "name": "@formsedsmcp/forms-edge-delivery-mcp-nodejs",
+  "version": "1.0.5",
+  "description": "Node.js MCP server that proxies to Python FORMS Edge Delivery MCP server via HTTP with 11 tools, 2 resources, and 13 styling prompts",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node src/test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "forms",
+    "edge-delivery",
+    "adobe",
+    "proxy"
+  ],
+  "author": "FORMS Edge Delivery Team",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

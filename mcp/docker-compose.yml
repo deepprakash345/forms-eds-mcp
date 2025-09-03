@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  forms-edge-delivery-mcp:
+    build: .
+    container_name: forms-edge-delivery-mcp
+    ports:
+      - "8080:8080"
+      - "5678:5678"  # Debug port for debugpy
+    environment:
+      - MCP_TRANSPORT=http
+      - MCP_PORT=8080
+      - MCP_HOST=0.0.0.0
+      - MCP_DEBUG=true
+      - WEATHER_API_KEY=${WEATHER_API_KEY:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Uncomment to mount configuration
+    # volumes:
+    #   - ./config.py:/app/config.py:ro
