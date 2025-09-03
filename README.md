@@ -120,7 +120,6 @@ Create or update your Cursor MCP configuration file:
       "args": ["./node_modules/@formsedsmcp/forms-edge-delivery-mcp-nodejs/src/server.js"],
       "env": {
         "MCP_SERVER_URL": "http://localhost:8080",
-        "MCP_SERVER_PORT": "8080",
         "HTTP_TIMEOUT": 30000,
         "DEBUG": "false"
       }
@@ -189,16 +188,6 @@ MIT License - see LICENSE file for details.
 
 - **Issues:** GitHub Issues
 - **Documentation:** Available through MCP tools and prompts
-- **Examples:** See `examples/` directory for usage samples
-
----
-
-## 🔗 Related Links
-
-- [Model Context Protocol Specification](https://spec.modelcontextprotocol.io/)
-- [Adobe Experience Manager FORMS Edge Delivery](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html)
-- [FastMCP Documentation](https://github.com/jlowin/fastmcp)
-- [Cursor IDE MCP Integration](https://docs.cursor.com/mcp)
 
 ---
 
